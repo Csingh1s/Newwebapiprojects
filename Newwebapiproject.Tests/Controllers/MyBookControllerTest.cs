@@ -32,7 +32,7 @@ namespace Newwebapiproject.Tests.Controllers
             Assert.True(books.Any());
             Assert.NotNull(getresult);
             Assert.NotNull(books);
-            Assert.Equal(19, books.Count());
+            Assert.Equal(2, books.Count());
             Assert.NotEqual(2, books.Count());
         }
 
