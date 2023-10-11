@@ -28,3 +28,4 @@ jobs:
           echo "Unit tests failed. Preventing merge $test_exit_code."
           exit $test_exit_code
         fi
+    if: ${{ always() }}
