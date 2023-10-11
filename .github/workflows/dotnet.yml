@@ -21,7 +21,7 @@ jobs:
       run: dotnet build Newwebapiproject.sln --no-restore
     - name: Test
       run: |
-        dotnet test ./Newwebapiproject.Tests/Newwebapiproject.Tests.csproj --no-build --verbosity normal --collect:"XPlat Code Coverage"
+        dotnet test ./Newwebapiproject.Tests/Newwebapiproject.Tests.csproj --no-build --verbosity normal --collect:"XPlat Code Coverage || test_exit_code"
         test_exit_code=$?
         if [ $test_exit_code -ne 0 ]; then
           echo "Unit tests failed. Preventing merge $test_exit_code."
